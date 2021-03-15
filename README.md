@@ -11,6 +11,8 @@
 - Contador de tempo
 - Incremento de ações a cada carta virada
 - Recuperando data-key da carta virada
+- Botão de reinício de jogo
+- Abertura de modal quando jogo finalizado
 
 ## 🛠 Technology
 
