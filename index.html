@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/aa50831f38.js" crossorigin="anonymous"></script>
+  <!-- Font CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+    <script src="./scripts/script.js"></script>
+
+  <title>App da Memória</title>
+</head>
+
+<body>
+
+  <div id="app-content">
+
+  <header class="container">
+    <h1>Jogo da Memória</h1>
+    <div id="status">
+      <div id="time">
+        <span>00:00</span>
+      </div>
+      <div id="moves">
+        <span>00</span> Moves
+      </div>
+      <div id="restart">
+        <a href="#" onclick="Actions.restartApp()"><i class="fas fa-undo"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="box-app"> <!-- display: grid -->
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="modal-venceu">
+  <div class="box-venceu">
+    <h2>VOCÊ VENCEU!</h2>
+    <div class="options">
+      <button onclick="Actions.restartApp()" id="jogar-novamente"><i class="fas fa-undo"></i></button>
+    </div>
+  </div>
+</div>
+  <script>App.init()</script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+/* ====================== Global ====================== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  --primary: linear-gradient(to bottom, #39C8F7, #2D5BFC);
+}
+body{
+  background: url('../assets/img/geometry2.png');
+  overflow-y: hidden;
+}
+
+.container{
+  width: min(90vw, 800vw);
+  text-align: center;
+}
+
+#app-content{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+/* ====================== Links e Botões ====================== */
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+button#jogar-novamente{
+  display: flex;
+  padding: 1.2rem;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  box-shadow: 0px 2px 10px 2px rgb(46 61 73 / 50%);
+  opacity: .8;
+  transition: all .2s ease
+}
+
+button#jogar-novamente:hover{
+  opacity: 1;
+  box-shadow: 0px 2px 10px 2px rgb(46 61 73 / 50%);
+}
+
+/* ====================== Header ====================== */
+
+h1{
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+#status{
+  width: min(60vw, 300px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+/* ====================== BoxJogo ====================== */
+
+.box-app{
+  width: 660px;
+  min-height: 680px;
+  background-image: var(--primary);
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgb(46 61 73 / 50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.box{
+  cursor: pointer;
+  background: #2e3d49;
+  width: 120px;
+  height: 120px;
+  border-radius: 1rem;
+  box-shadow: 5px 2px 5px rgb(46 61 73 / 50%);
+  transform: rotateY(180deg);
+  transition: all .5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-active{
+  background:rgba(57, 200, 247, .5);
+  transform: scale(1.1) rotateY(0deg);
+  box-shadow: 5px 2px 20px rgb(46 61 73 / 100%);
+}
+
+.box img{
+  color: #fff;
+  width: 35%;
+  visibility: hidden;
+}
+
+.img-active, .img-sucess{
+  visibility: visible !important;
+}
+
+.box-sucess{
+  background:rgba(11, 237, 86, 0.85);
+  transform: scale(1) rotateY(0deg);
+  box-shadow: 5px 2px 20px rgb(46 61 73 / 100%);
+}
+
+.modal-venceu{
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: all .1s ease;
+}
+
+.box-venceu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  position: absolute;
+  top: 30vh;
+}
+
+.box-venceu h2{
+  color: #303030;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+@media (min-width: 350px) and (max-width: 600px) { 
+
+  html{
+    font-size: 85%;
+  }
+  .box-app {
+    max-width: 85vw;
+    min-height: 50vh;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+  .box{
+    width: 55px;
+    height: 55px
+  }
+/* // Dispositivos small (telefones em modo paisagem, com menos de 768px) */
+/* @media (max-width: 767.98px) { ... } */
+}
+@media (max-width: 321px) {
+  html{
+    font-size: 75%;
+  }
+  .box-app {
+    max-width: 85vw;
+    min-height: 50vh;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+
+  .box{
+    width: 45px;
+    height: 45px
+  }
+}
