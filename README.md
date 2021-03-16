@@ -9,7 +9,7 @@
 ## :rocket: Funcionalidades
 
 - Contador de tempo
-- Incremento de ações a cada carta virada
+- Incremento de ações a cada jogada
 - Recuperando data-key da carta virada
 - Botão de reinício de jogo
 - Abertura de modal quando jogo finalizado
